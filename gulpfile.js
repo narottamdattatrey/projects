@@ -4,7 +4,8 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 
 //methods
-//gulp-uglify minified the javascript file.
+//gulp-uglify uglify the files.
+//gulp-concat concat all js files and minified them.
 gulp.task('default', function() {
     gulp.src('development/personal-website/**/*.js')
         .pipe(uglify())
