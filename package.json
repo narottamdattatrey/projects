@@ -1,0 +1,19 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "This is the collection of web projects managed under one section",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dattatrey93/projects.git"
+  },
+  "author": "Narottam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dattatrey93/projects/issues"
+  },
+  "homepage": "https://github.com/dattatrey93/projects#readme"
+}
