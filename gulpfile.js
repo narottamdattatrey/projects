@@ -6,9 +6,10 @@ var concat = require('gulp-concat');
 //methods
 //gulp-uglify uglify the files.
 //gulp-concat concat all js files and minified them.
-gulp.task('default', function() {
-    gulp.src('development/personal-website/**/*.js')
+gulp.task('scripts', function() {
+    return gulp.src('development/personal-website/**/*.js')
         .pipe(uglify())
         .pipe(concat('app.min.js'))
         .pipe(gulp.dest('dist'));
 });
+//always add return to above type like functions
