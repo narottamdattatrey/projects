@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/dattatrey93/projects/issues"
   },
-  "homepage": "https://github.com/dattatrey93/projects#readme"
+  "homepage": "https://github.com/dattatrey93/projects#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^2.0.0"
+  }
 }
