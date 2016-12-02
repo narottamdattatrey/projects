@@ -21,5 +21,9 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp-connect": "^5.0.0",
+    "gulp-webserver": "^0.9.1"
   }
 }
