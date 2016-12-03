@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var webserver = require('gulp-webserver');
 
 //methods 
 //gulp-uglify uglify the files.
@@ -16,4 +17,12 @@ gulp.task('scripts', function() {
 
 gulp.task('watch', function(){
 	gulp.watch('development/personal-website/**/*.js', ['scripts']);
-})
+});
+gulp.task('webserver', function(){
+	gulp.src('app')
+	.pipe(webserver({
+		livereload: true,
+		directoryListing: true,
+		open: true
+	}));
+});
