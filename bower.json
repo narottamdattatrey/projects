@@ -1,0 +1,17 @@
+{
+  "name": "projects",
+  "description": "This is the collection of web projects managed under one section",
+  "main": "index.js",
+  "authors": [
+    "Narottam"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dattatrey93/projects",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
