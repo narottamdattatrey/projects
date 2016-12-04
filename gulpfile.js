@@ -1,35 +1,31 @@
-//Dependencies
+ /**
+ *  Welcome to your gulpfile!
+ *  The gulp tasks are splitted in several files in the gulp directory
+ *  because putting all here was really too long
+ */
+
+'use strict';
+
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-// var webserver = require('gulp-webserver');
-var sass = require('gulp-sass');
+var wrench = require('wrench');
 
-//methods 
-//gulp-uglify uglify the files.
-//gulp-concat concat all js files and minified them.
-gulp.task('scripts', function() {
-    return gulp.src('development/personal-website/**/*.js')
-        .pipe(uglify())
-        .pipe(concat('app.min.js'))
-        .pipe(gulp.dest('dist/js'));
+/**
+ *  This will load all js or coffee files in the gulp directory
+ *  in order to load all gulp tasks
+ */
+
+wrench.readdirSyncRecursive('./gulp').filter(function (file) {
+  return (/\.(js|coffee)$/i).test(file);
+}).map(function (file) {
+  require('./gulp/' + file);
 });
-//always add return to above type like functions
 
-gulp.task('watch', function(){
-	gulp.watch('development/**/*.js', ['scripts']);
-});
-// gulp.task('webserver', function(){
-// 	gulp.src('app')
-// 	.pipe(webserver({
-// 		livereload: true,
-// 		directoryListing: true,
-// 		open: true
-// 	}));
-// });
 
-gulp.task('sass', function(){
-	return gulp.src('development/**/*.scss')	
-	.pipe(concat('vender.min.css'))
-	.pipe(gulp.dest('dist/css'));
+/**
+ *  Default task clean temporaries directories and launch the
+ *  main optimization build task
+ */
+
+gulp.task('default', ['clean'], function () {
+  gulp.start('build');
 });
